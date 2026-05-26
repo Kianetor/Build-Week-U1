@@ -206,13 +206,6 @@ const startTimer = () => {
 //3
 //FUNZIONE QUIZ renderQuiz
 //
-//
-
-//SCHERMATA
-//4
-//FUNZIONE QUIZ renderQuiz
-//
-//
 
 const renderQuiz = () => {
   //incollato js quiz
@@ -282,7 +275,7 @@ const renderQuiz = () => {
 renderWelcome(); //portami alla main
 
 //SCHERMATA
-//5
+//4
 //FUNZIONE RISULTATI renderResults
 //
 //
