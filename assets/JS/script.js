@@ -319,7 +319,7 @@ const renderResults = () => {
 
 
 
-
+renderWelcome();
  //riavvio l'applicazione per caricare tutto ,
 //  si mette in basso perche vogliamo assicurarci che il browser legga prima tutto
 //  il contenuto di javascript e poi sia pronto ad esesguire le funzioni
