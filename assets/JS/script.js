@@ -101,8 +101,12 @@ let timerId = null;
    - handleTimeUp() per il tempo scaduto
    - advance() per andare alla domanda successiva o ai risultati
 */
+let shuffledQuestions = [];
 const suonoTick = new Audio("assets/sounds/tick2.wav"); //audio nel tick per un po di vitalita
 const app = document.querySelector("#app"); //collega al main dell html
+const shuffleQuestions = () => {
+  shuffledQuestions = [...QUESTIONS].sort(() => Math.random() -0.5);
+};
 
 //SCHERMATA
 //1 INIZIALE
@@ -126,6 +130,9 @@ mondo dell'informatica e del web.
 
   const startButton = document.getElementById("buttonStart");
   startButton.addEventListener("click", function () {
+    currentQuestion=0;
+    score=0;
+    shuffleQuestions();
     renderQuiz(); //l'ascoltatore del bottone va messo dentro la funziione welcome perche
     //deve creare prima i bottoni fisici e poi dargli le funzioni interne
   });
@@ -206,7 +213,7 @@ const startTimer = () => {
 
 const renderQuiz = () => {
   //incollato js quiz
-  const questionNow = QUESTIONS[currentQuestion];
+  const questionNow = shuffledQuestions[currentQuestion];
 
   const answersAll = [
     ...questionNow.incorrect_answers,
@@ -319,7 +326,14 @@ const renderResults = () => {
 
 
 
+
+
+
+
+
 renderWelcome();
  //riavvio l'applicazione per caricare tutto ,
 //  si mette in basso perche vogliamo assicurarci che il browser legga prima tutto
 //  il contenuto di javascript e poi sia pronto ad esesguire le funzioni
+
+
