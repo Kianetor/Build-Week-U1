@@ -1,3 +1,4 @@
+/*Reset Totale*/
 * {
   box-sizing: border-box;
 }
@@ -45,10 +46,39 @@ body {
   font-size: x-large;
 }
 
-.benvenuto {
+/* SEZIONE WELCOME */
+.welcome {
   color: rebeccapurple;
 }
 
+/* HTML del Benvenuto */
+
+.welcome h2 {
+  color: #1b2845;
+  margin-top: -10px;
+}
+
+.welcome p {
+  color: #1b2845;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  font-weight: 40;
+}
+
+.welcome ul {
+  font-size: 1rem;
+  color: #1b1535;
+  margin-left: -20px;
+}
+
+.welcome li {
+  font-size: 1rem;
+  color: #1b1535;
+  padding: 2.5px;
+}
+
+
+/* BOTTONE AVVIO QUIZ */
 #buttonStart {
   display: flex;
   margin-top: 30px;
@@ -60,164 +90,119 @@ body {
   color: aliceblue;
   padding: 13px 11px 10px;
 }
+
 #buttonStart:hover {
   background-color: #1b273f;
   color: #ffffff;
   cursor: pointer;
 }
 
-.benvenuto h2 {
-  color: #1b2845;
-  margin-top: -10px;
 
-}
-.benvenuto p {
-  color: #1b2845;
-  font-size: 1rem;
-  margin-bottom: 30px;
-  font-weight: 40;
-}
 
-.benvenuto ul {
-  font-size: 1rem;
-  color: #1b1535;
-  margin-left: -20px;
-}
-
-.benvenuto li {
-  font-size: 1rem;
-  color: #1b1535;
-  padding: 2.5px;
-}
-
-.nascosto {
-  display: none;
-}
-/* aggiunto css da Javier per il timer*/
-
-.risposte {
-  margin-top: 40px;
-}
-
-.results {
-  text-align: center;
-  margin-top: 5px;
-}
-
-.completamento {
-  font-size: 20px;
-  margin-top: 30px;
-}
-.percentuale {
-  font-size: 70px;
-  font-weight: 600;
-}
-.promosso {
-  background-color: rgb(220, 249, 220);
-  border-radius: 8px;
-  padding: 9.7px 4px;
-  font-weight: bolder;
-  color: rgb(9, 129, 9);
-}
-
-.progresso {
+.quiz-container {
   display: flex;
-  flex-direction: row;
+  /* attivo flexbox */
   justify-content: space-between;
-  gap: 20px;
-}
-
-.progressBarSopra {
-  background-color: #f6f6f7;
-  padding: 5px 100px 5px 300px;
-  border-radius: 30px;
-}
-.progressBarSotto {
-  background-color: #f6f6f7;
-  padding: 10px 100px 5px 300px;
-  border-radius: 30px;
-  margin-right: 13px;
-}
-
-#buttonRestart {
-  margin-top: 30px;
-  justify-content: center;
-  border-radius: 12px;
-  width: 140px;
-  font-size: 1rem;
-  background-color: #1b273f;
-  color: aliceblue;
-  padding: 13px 11px 10px;
-  cursor: pointer;
-}
-
-.domanda {
-  display: flex; /* attivo flexbox */
-  justify-content: space-between; /* spingo titolo a sinistra e timer a destra cerando spazio */
-  align-items: center; /* allineo perfettamente in modo verticale */
-  width: 100%; /* fittati bene dentro il box */
-  margin-bottom: 40px; /* un po di distanza da sotto */
+  /* spingo titolo a sinistra e timer a destra cerando spazio */
+  align-items: center;
+  /* allineo perfettamente in modo verticale */
+  width: 100%;
+  /* fittati bene dentro il box */
+  margin-bottom: 40px;
+  /* un po di distanza da sotto */
 }
 
 .question-counter {
-  margin: 0; /* tolgo margini di default per non sballare */
+  margin: 0;
+  /* tolgo margini di default per non sballare */
   font-weight: 300;
   color: grey;
 }
 
-.timerNero {
-  margin: 0; /* per non sballare */
-  font-size: 1.3rem; /* grandezza */
-  font-weight: bold; /* grassetto */
-  color: #1b2845; /* colore nero */
-  background-color: #f1f2f6; /* colore del prof */
-  padding: 8px 18px; /* piu spazio interno */
-  border-radius: 20px; /* angoli belli rotondi */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* ombra piccolissima */
-  transition: color 0.3s ease; /* un pelo di transition per il rosso */
+.black-timer {
+  margin: 0;
+  /* per non sballare */
+  font-size: 1.3rem;
+  /* grandezza */
+  font-weight: bold;
+  /* grassetto */
+  color: #1b2845;
+  /* colore nero */
+  background-color: #f1f2f6;
+  /* colore del prof */
+  padding: 8px 18px;
+  /* piu spazio interno */
+  border-radius: 20px;
+  /* angoli belli rotondi */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  /* ombra piccolissima */
+  transition: color 0.3s ease;
+  /* un pelo di transition per il rosso */
 }
 
-.timerRosso {
-  color: #ffffff !important; /* numerino bianco */
-  background-color: #ff3b30 !important; /* sfondo bello rosso*/
-  animation: pulse 0.8s infinite alternate; /* pulsazione animata */
+.red-timer {
+  color: #ffffff !important;
+  /* numerino bianco */
+  background-color: #ff3b30 !important;
+  /* sfondo bello rosso*/
+  animation: pulse 0.8s infinite alternate;
+  /* pulsazione animata */
 }
 
 /* comandi per le animazioni del browser */
 @keyframes pulse {
   0% {
-    transform: scale(1); /* dalla scala normale a quella piu grande dopo*/
+    transform: scale(1);
+    /* dalla scala normale a quella piu grande dopo*/
   }
+
   100% {
-    transform: scale(1.12); /* ingrandisce del 12% */
+    transform: scale(1.12);
+    /* ingrandisce del 12% */
   }
 }
 
-/* CSS del Quiz */
+/* RISPOSTE, DOMANDE E PULSANTE DEL QUIZ */
 
-.risposte {
+.answers {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* distanza tra uno e laltro */
+  gap: 16px;
+  /* distanza tra uno e laltro */
   margin-top: 40px;
 }
 
+/* Classe al click risosta giusta */
+
 .correct {
-  background-color: #2ed573 !important; /* sfondo verde */
-  color: #ffffff !important; /* testo bianco */
-  border-color: #2ed573 !important; /* bordino verde */
+  background-color: #2ed573 !important;
+  /* sfondo verde */
+  color: #ffffff !important;
+  /* testo bianco */
+  border-color: #2ed573 !important;
+  /* bordino verde */
 }
 
+/* Classe al click risosta sbagliata */
 .wrong {
-  background-color: #ff4757 !important; /* sfondo rosso */
-  color: #ffffff !important; /* testo bianco */
-  border-color: #ff4757 !important; /* bordino rosso */
+  background-color: #ff4757 !important;
+  /* sfondo rosso */
+  color: #ffffff !important;
+  /* testo bianco */
+  border-color: #ff4757 !important;
+  /* bordino rosso */
 }
+
+/* Blocca hover una volta data la risposta */
 
 .btn-answer:disabled {
-  cursor: default; /* blocca hover una volta data la risposta */
-  opacity: 1; /* non sbiadisce su safari e chrome */
+  cursor: default;
+  /* blocca hover una volta data la risposta */
+  opacity: 1;
+  /* non sbiadisce su safari e chrome */
 }
+
+/* Bottone Risposta */
 
 .btn-answer {
   width: 100%;
@@ -236,11 +221,115 @@ body {
 .btn-answer:hover:not(:disabled) {
   /* metto il not disabled perche altrimenti 
   si accende lo stesso dopo aver risposto */
-  background-color: #2b3956; /* sfondino blu per hover */
-  color: #ffffff; /* testo bianco */
-  border-color: #2b3956; /* bordino blu */
+  background-color: #2b3956;
+  /* sfondino blu per hover */
+  color: #ffffff;
+  /* testo bianco */
+  border-color: #2b3956;
+  /* bordino blu */
 }
 
 .question-counter {
   font-size: 1rem;
+}
+
+.results-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.results-title {
+margin-top: -8px;
+}
+
+.complete-quiz {
+  font-size: 1.2rem;
+  margin-bottom: -20px;
+}
+
+.percentage {
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+
+.passed {
+ color: #20a25d;
+  background-color: #b0f4c4;
+  padding: 12px 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  margin-top: 2px;
+}
+
+.failed {
+  color: #de2232;
+  background-color: #f5acb2;
+  padding: 12px 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  margin-top: 2px;
+}
+
+
+
+/* PROBABILMENTE DA ELIMINARE PERCHè NON PUNTA A NULLA
+.promosso {
+  background-color: rgb(220, 249, 220);
+  border-radius: 8px;
+  padding: 9.7px 4px;
+  font-weight: bolder;
+  color: rgb(9, 129, 9);
+}
+*/
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+
+#buttonRestart {
+  margin-top: 30px;
+  justify-content: center;
+  border-radius: 12px;
+  width: 140px;
+  font-size: 1rem;
+  background-color: #1b273f;
+  color: aliceblue;
+  padding: 13px 11px 10px;
+  cursor: pointer;
+}
+
+
+.progressBarTotal {
+  background-color: #dbdbdb;
+  height: 12px;
+  border-radius: 6px;
+  flex-grow: 1;
+  margin: 0 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBarTop {
+  background-color: rgb(0, 255, 47);
+  height: 100%;
+  border-radius: 6px;
+}
+
+.progressBarBottom {
+  background-color: #e70316;
+  height: 100%;
+  border-radius: 6px;
 }

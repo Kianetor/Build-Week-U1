@@ -16,19 +16,19 @@
 
 const QUESTIONS = [
   {
-    question: "Cosa significa l'acronimo CPU?",
-    correct_answer: "Central Processing Unit",
+    question: "In azienda , la consegna del progetto è sempre :",
+    correct_answer: "Ieri",
     incorrect_answers: [
-      "Central Process Unit",
-      "Computer Personal Unit",
-      "Central Processor Unit",
+      "Il prima possibile",
+      "Entro venerdì",
+      "A fine mese",
     ],
   },
   {
     question:
-      "In Java, quale keyword si usa per impedire che una variabile venga modificata?",
-    correct_answer: "final",
-    incorrect_answers: ["static", "private", "public"],
+      "Quali sono i nomi di personaggi più utilizzati nel linguaggio JavaScript?",
+    correct_answer: "Pippo, Pluto , Paperino",
+    incorrect_answers: ["Topolino, Minnie, Paperino", "Braccio di Ferro, Olivia, Bruto", "Mr.Incredible ,Elastigirl , Flash"],
   },
   {
     question: "Il logo di Snapchat è una campana.",
@@ -110,14 +110,14 @@ const app = document.querySelector("#app"); //collega al main dell html
 //
 //
 const renderWelcome = () => {
-  app.innerHTML = `<div class= "benvenuto">
+  app.innerHTML = `<div class= "welcome">
 <h2>Benvenuto al tuo esame</h2>
 
 <p>Una serie di 10 domande sul 
 mondo dell'informatica e del web.
  Per ogni domanda hai 20 secondi di tempo.</p>
 <ul>
-<li>in 10 si gioca meglio</li>
+<li>Ogni domanda è a tempo e puoi ricevere una sola risposta/li>
 <li>Una volta cliccata una risposta, la domanda è chiusa.</li>
 <li>Il quiz dura circa 3 minuti.</li>
 </ul>
@@ -147,8 +147,7 @@ const handleTimeout = () => {
   });
   // Passa alla domanda successiva dopo il delay
 
-  
- setTimeout(() => {
+  setTimeout(() => {
     if (currentQuestion < QUESTIONS.length - 1) {
       currentQuestion++;
       renderQuiz();
@@ -157,7 +156,6 @@ const handleTimeout = () => {
     }
   }, FEEDBACK_DELAY);
 };
-
 
 //copio la mia funzione render css non ancora funzionante
 // per vedere visivamente se incolla e fa funzionare il timer
@@ -188,7 +186,7 @@ const startTimer = () => {
     suonoTick.play(); //da il suono del tick */
     if (timeLeft <= 5) {
       //se va sotto i 5 secondi
-      scegliTimer.classList.add("timerRosso"); //allora dagli il css del timer rosso
+      scegliTimer.classList.add("red-timer"); //allora dagli il css del timer rosso
     }
 
     if (timeLeft <= 0) {
@@ -200,7 +198,6 @@ const startTimer = () => {
     }
   }, 1000); //gli do il mille per dirgli di ripetere il codice ogni secondo
 };
-
 
 //SCHERMATA
 //3
@@ -223,13 +220,13 @@ const renderQuiz = () => {
     .join("");
 
   //incollato js quiz
-  app.innerHTML = `<div class= "domanda">
+  app.innerHTML = `<div class= "quiz-container">
   <span class= "question-counter">Domanda ${currentQuestion + 1} di ${QUESTIONS.length} </span>
-<p id = "timer" class = "timerNero">20s</p>
+<p id = "timer" class = "black-timer">20s</p>
    </div>
   <div class= "quiz">
   <h4>${questionNow.question}</h4>
-  <div class= "risposte">${answersHTML}</div>
+  <div class= "answers">${answersHTML}</div>
 </div>`;
 
   const buttonsAnswers = document.querySelectorAll(".btn-answer");
@@ -266,7 +263,6 @@ const renderQuiz = () => {
     });
   });
 
-
   //incollato js quiz
   startTimer(); //aggiungo il render dello startTimer qui
   // per darlo subito appena parte ogni domanda
@@ -279,34 +275,51 @@ renderWelcome(); //portami alla main
 //FUNZIONE RISULTATI renderResults
 //
 //
-
+const graduation = () => {
+  if (score >= 6) {
+    return `<p class="passed">Promosso</p>`;
+  } else {
+    return `<p class="failed">Bocciato</p>`;
+  }
+};
 const renderResults = () => {
-  app.innerHTML = `<div class= "results">
+  const percentageWright = (score / 10) * 100;
+  const percentageWrong = ((QUESTIONS.length - score) / 10) * 100;
+  const percentageTotal = ((QUESTIONS.length / 10) * 100);
+
+  // in progressBarSotto mettere ${percentageTotal - percentage}
+  app.innerHTML = `<div class="results-container">
+
+  <h2 class="results-title">Risultati</h2>
+
+  <p class="complete-quiz">Hai completato il quiz.</p>
   
-  <h3>Risultati</h3>
-  <p class="completamento">Hai completato il quiz.</p>
-  <br>
-  <br>
-  <p class="percentuale">70%</p>
-  <br>
-  <br>
-  <p class="promosso">Promosso</p> 
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="progresso">
-  Corrette<div class="progressBarSopra"></div>7/10
+  <p class="percentage">${percentageWright}%</p>
+  <div class="graduation">${graduation()}</div> 
+  <div class="progress">
+  Corrette<div class="progressBarTotal" style="width: ${percentageTotal}%"><div class="progressBarTop" style="width: ${percentageWright}%">
+  </div></div>${score}/10
   </div>
-  <br>
-  <div class="progresso">
-  Sbagliate <div class="progressBarSotto"></div>3/10
+  <div class="progress">
+  Sbagliate <div class="progressBarTotal"  style="width: ${percentageTotal}%"><div class="progressBarBottom" style="width: ${percentageWrong}%"> 
+  </div></div>${QUESTIONS.length - score}/10
   </div>
   <div> 
   <button id="buttonRestart">Ricomincia</button>
   </div>
   </div>`; //percentuale e promosso , da collegare a js promosso e bocciato
+
+
+  const restartButton = document.getElementById("buttonRestart");
+  restartButton.addEventListener("click", function () {
+    renderWelcome();
+  });
+
 };
-renderWelcome(); //riavvio l'applicazione per caricare tutto ,
+
+
+
+
+ //riavvio l'applicazione per caricare tutto ,
 //  si mette in basso perche vogliamo assicurarci che il browser legga prima tutto
 //  il contenuto di javascript e poi sia pronto ad esesguire le funzioni
