@@ -333,3 +333,119 @@ margin-top: -8px;
   height: 100%;
   border-radius: 6px;
 }
+
+/* Feedback */
+
+
+/* Stelle di feedback*/
+
+.title-feed {
+  font-size: 1.4rem;
+}
+
+.star-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.star {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.star-image {
+  background: none;
+  border: 0px solid rgb(0, 0, 0);
+  font-size: 70px;
+  color: rgb(120, 92, 115);
+  cursor:pointer;
+}
+
+.star-image:hover {
+  color: rgb(174, 53, 156);
+}
+
+.star-image:focus {
+  color: rgb(255, 0, 208);
+}
+
+.star-number {
+  font-size: 1.2rem;
+}
+
+.star-text {
+font-size: 1rem;
+margin-top: 5px;
+}
+
+/* Textarea cosa ti è piaciuto*/
+
+.what-liked {
+  margin-top: 40px;
+}
+
+.liked-label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#liked-text {
+  margin-top: 5px;
+  height: 120px;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 120px;
+  max-height: 120px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+#char-counter-liked {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+/* Textarea cosa cambieresti*/
+
+.what-advice {
+  margin-top: 40px;
+}
+
+.advice-label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#advice-text {
+  margin-top: 5px;
+  height: 120px;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 120px;
+  max-height: 120px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+#char-counter-advice {
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+/* Email del feedback */
+
+.email-label {
+  display:block;
+}
+
+#email-text {
+  height: 30px;
+  max-width: 100%;
+  min-width: 100%;
+  border-color: rgb(225, 225, 225);
+  border-radius: 6px;
+}

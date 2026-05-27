@@ -325,15 +325,77 @@ const renderResults = () => {
 };
 
 
+const renderFeedback = () => {
+  app.innerHTML = `
+  <div class= "feedback">
+    <h2 class="title-feed">Come valuteresti la tua esperienza complessiva?</h2>
+
+    <div class="star-container">
+      <div class="star"> 
+        <button class="star-image" type="button" data-value="1">&#9734;</button>
+        <span class="star-number">1</span>
+        <span class="star-text">Pessima</span>
+      </div> 
+
+      <div class="star"> 
+        <button class="star-image" type="button" data-value="2">&#9734;</button>
+        <span class="star-number">2</span>
+        <span class="star-text">Scarsa</span>
+      </div> 
+
+      <div class="star"> 
+        <button class="star-image" type="button" data-value="3">&#9734;</button>
+        <span class="star-number">3</span>
+        <span class="star-text">Neutra</span>
+      </div> 
+
+      <div class="star"> 
+        <button class="star-image" type="button" data-value="4">&#9734;</button>
+        <span class="star-number">4</span>
+        <span class="star-text">Buona</span>
+      </div> 
+
+      <div class="star"> 
+        <button class="star-image" type="button" data-value="5">&#9734;</button>
+        <span class="star-number">5</span>
+        <span class="star-text">Eccellente</span>
+      </div> 
+    </div>
+  </div>
+  
+  <div class="what-liked">
+    <label class="liked-label">Cosa ti è piaciuto di più?</label>
+    <textarea id="liked-text" maxlength="500" placeholder="Condividi qui i tuoi pensieri..."></textarea>
+    <div id="char-counter-liked">0 / 500 caratteri</div>          
+  </div>
+
+  <div class="what-advice">
+    <label class="advice-label">Cosa possiamo migliorare?</label>
+    <textarea id="advice-text" maxlength="500" placeholder="Condividi qui i tuoi pensieri..."></textarea>
+    <div id="char-counter-advice">0 / 500 caratteri</div>          
+  </div>
+
+  <div class="email">
+    <label class="email-label">La tua email <span>(facoltativa)</span></label>
+    <input type="email" id="email-text" placeholder="es. nome@mail.it"></input>     
+  </div>
 
 
+  <button id="submit-feed">Invia Feedback</button>
+  `;
+
+// const selectedStar = document.getElementsByClassName("star-image");
+ // star-image.addEventListener("click", function () {
+  //  return `&#9733;`;
+ // });
+}
+
+renderFeedback();
+
+//renderWelcome();
 
 
-
-
-renderWelcome();
- //riavvio l'applicazione per caricare tutto ,
+//riavvio l'applicazione per caricare tutto ,
 //  si mette in basso perche vogliamo assicurarci che il browser legga prima tutto
 //  il contenuto di javascript e poi sia pronto ad esesguire le funzioni
-
 
