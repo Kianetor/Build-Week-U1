@@ -1,4 +1,5 @@
-# Build-Week-U1 <!--COS'È-->
+# BUILD WEEK 1 <!--COS'È--> 
+
 Realizzazione di un progetto sviluppato in js con gestione dinamica del DOM, domande a tempo, schermata con risultati e schermata feedback.
 approccio:
 -state --> render --> events
@@ -20,10 +21,16 @@ HTML;CSS;JAVASCRIPT
 
 
 ## FUNZIONI PRINCIPALI
+
 spiegazione tecnica del compito di ognuna delle funzioni principali usate da noi
-sottosezioni
-OBIETTIVI
+### sottosezioni
+
+## OBIETTIVI
 Lavorare in team ed esercitarsi su manipolazione DOM, rendering dimanico ecc.
 
-POSSIBILI MIGLIORIE
+## POSSIBILI MIGLIORIE
 LocalStorage per salvare risultati del quiz e feedback, tentativi max 3
+
+
+
+
