@@ -34,25 +34,36 @@ L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e perf
 ## 📂 Struttura del Progetto
 Il progetto è strutturato come una **Single Page Application (SPA)**. Il file HTML rimane fisso, mentre JavaScript si occupa di svuotare e ripopolare il tag `<main id="app">` in base alla schermata corrente.
 
+```text
+├── index.html                  # File HTML principale (Entry-point unico)
+├── assets/
+│   ├── css/
+│   │   └── style.css           # Fogli di stile, layout e animazioni custom
+│   ├── js/
+│   │   └── script.js           # Stato globale, database domande e logica del quiz
+│   ├── img/
+│   │   ├── epicode-logo.png    # Logo istituzionale nell'header
+│   │   └── bg.jpg              # Immagine di sfondo dell'applicazione
+```
 ---
 
+## ⚙️ Architettura del Codice (State-Render-Events)
+L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Events**, garantendo una separazione netta tra i dati e l'interfaccia visiva:
 
-## FUNZIONALITÀ <!--COME È STRUTTURATO E COSA FA-->
-schermata iniziale, button dinamici, domande e risposte generate dinamicamente, ordine delle domande casuale, timer, risposte corrette/sbagliate, score aggiornato, stato promosso/bocciato, riavvio quiz e/o feedback 
+---
 
+## 🛠️ Funzioni Principali
+Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
 
+---
 
+## ✨ Funzionalità nel Dettaglio
+L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
 
+---
 
-## FUNZIONI PRINCIPALI
-
-spiegazione tecnica del compito di ognuna delle funzioni principali usate da noi
-### sottosezioni
-
-
-## POSSIBILI MIGLIORIE
-LocalStorage per salvare risultati del quiz e feedback, tentativi max 3
-
+## 🚀 Possibili Migliorie
+Per futuri cicli di sviluppo, sono state identificate le seguenti ottimizzazioni:
 
 
 
