@@ -196,10 +196,8 @@ body {
 /* Blocca hover una volta data la risposta */
 
 .btn-answer:disabled {
-  cursor: default;
-  /* blocca hover una volta data la risposta */
-  opacity: 1;
-  /* non sbiadisce su safari e chrome */
+  cursor: default; /* blocca hover una volta data la risposta */
+  opacity: 1; /* non sbiadisce su safari e chrome */
 }
 
 /* Bottone Risposta */
@@ -229,9 +227,14 @@ body {
   /* bordino blu */
 }
 
+
 .question-counter {
   font-size: 1rem;
 }
+
+
+/* CSS RENDER RESULTS ANIMAZIONE E GRAFICO */
+
 
 .results-container {
   text-align: center;
@@ -247,91 +250,162 @@ margin-top: -8px;
   margin-bottom: -20px;
 }
 
-.percentage {
-  font-size: 70px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-
-.passed {
- color: #20a25d;
-  background-color: #b0f4c4;
-  padding: 12px 12px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  font-family: Arial, sans-serif;
-  border-radius: 8px;
-  margin-bottom: 60px;
-  margin-top: 2px;
-}
-
-.failed {
-  color: #de2232;
-  background-color: #f5acb2;
-  padding: 12px 12px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  font-family: Arial, sans-serif;
-  border-radius: 8px;
-  margin-bottom: 60px;
-  margin-top: 2px;
-}
-
-
-
-/* PROBABILMENTE DA ELIMINARE PERCHè NON PUNTA A NULLA
-.promosso {
-  background-color: rgb(220, 249, 220);
-  border-radius: 8px;
-  padding: 9.7px 4px;
-  font-weight: bolder;
-  color: rgb(9, 129, 9);
-}
-*/
-
-.progress {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  font-weight: bold;
-}
-
-
-#buttonRestart {
-  margin-top: 30px;
-  justify-content: center;
-  border-radius: 12px;
-  width: 140px;
-  font-size: 1rem;
-  background-color: #1b273f;
-  color: aliceblue;
-  padding: 13px 11px 10px;
-  cursor: pointer;
-}
-
-
-.progressBarTotal {
-  background-color: #dbdbdb;
-  height: 12px;
-  border-radius: 6px;
-  flex-grow: 1;
-  margin: 0 12px;
-  overflow: hidden;
+.chart-wrapper {
   position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 40px auto;
 }
 
-.progressBarTop {
-  background-color: rgb(0, 255, 47);
-  height: 100%;
-  border-radius: 6px;
+.chart-center-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
 
-.progressBarBottom {
-  background-color: #e70316;
-  height: 100%;
+.chart-center-text strong {
+  font-size: 3rem;
+  color: #1b273f;
+}
+
+.chart-center-text span {
+  color: #c7cad6;
+  font-size: 0.9rem;
+}
+
+/* --- TESTI DENTRO IL GRAFICO --- */
+.center-verdetto {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.text-superato {
+  color: #2ed573 !important;
+}
+
+.text-fallito {
+  color: #ff4757 !important;
+}
+
+.center-sub {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  margin-top: 2px;
+}
+
+/* --- BARRA ORIZZONTALE SCURA (STILE FOTO) --- */
+.riepilogo-container-orizzontale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid;
+  border-color: #21355f;
+  padding: 16px 24px;
+  border-radius: 12px;
+  margin: 30px 0 15px 0;
+  gap: 20px;
+}
+
+.riepilogo-box {
+  display: flex;
+  gap: 20px;
+}
+
+.box-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 20px;
+  border-right: 1px solid #3d3d5c; /* Linea verticale grigia divisoria */
+}
+
+.box-stat:last-child {
+  border-right: none; /* Rimuove la linea dall'ultimo elemento */
+}
+
+.lbl-stat {
+  font-size: 0.75rem;
+  color: #a0a0c0;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Numeri grandi colorati */
+.num-verde {
+  color: #2ed573;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.num-rosso {
+  color: #ff4757;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.num-blu {
+  color: #5352ed;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Riposizionamento e stile del bottone Ricomincia dentro la barra */
+#buttonRestart {
+  margin: 0;
+  background-color: #1b273f;
+  color: #ffffff;
+  border: 1px solid #3d3d5c;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+#buttonRestart:hover {
+  background-color: #21355f;
+}
+
+/* Testi di contorno inferiori */
+.feedback-invito {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.avviso-errori {
+  background-color: rgba(255, 165, 0, 0.08);
+  border: 2px solid orange;
+  color: orange;
+  font-size: 0.8rem;
+  padding: 12px;
   border-radius: 6px;
+  text-align: left;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+/* FINE CSS PER DARE ANIMAZIONE E GRAFICO ALLA PERCENTUALE DELLA SCHERMATA FINALE */
+#button-gofeedback {
+  display: flex;
+  margin: 0 auto;
+  background-color: #1b273f;
+  color: #ffffff;
+  border: 1px solid #3d3d5c;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+  justify-content: center;
+}
+#button-gofeedback:hover {
+  background-color: white;
+  color: #1b273f;
 }
 
 /* Feedback */
@@ -355,20 +429,30 @@ margin-top: -8px;
 
 }
 
+/* Stato base della stella (Vuota) */
 .star-image {
   background: none;
-  border: 0px solid rgb(0, 0, 0);
-  font-size: 70px;
-  color: rgb(120, 92, 115);
-  cursor:pointer;
+  border: none;
+  font-size: 65px;
+  color: rgb(180, 160, 175);
+  /* Colore grigio spento di base */
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.1s ease;
 }
 
+/* Effetto dinamico al passaggio del mouse sulla singola stella */
 .star-image:hover {
-  color: rgb(174, 53, 156);
+  color: rgb(215, 40, 185);
+  transform: scale(1.1);
 }
 
-.star-image:focus {
-  color: rgb(255, 0, 208);
+/* Stato della stella quando viene cliccata e attivata tramite JS */
+.star-image.active-star {
+  color: #21355f !important;
+  /* Colore acceso definitivo */
+  animation: pop 0.3s ease-in-out;
 }
 
 .star-number {
@@ -376,9 +460,10 @@ margin-top: -8px;
 }
 
 .star-text {
-font-size: 1rem;
-margin-top: 5px;
+  font-size: 1rem;
+  margin-top: 5px;
 }
+
 
 /* Textarea cosa ti è piaciuto*/
 
@@ -395,12 +480,11 @@ margin-top: 5px;
 #liked-text {
   margin-top: 5px;
   height: 120px;
-  max-width: 100%;
-  min-width: 100%;
-  min-height: 120px;
-  max-height: 120px;
+  resize: none;
   width: 100%;
   border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top:5px;
 }
 
 #char-counter-liked {
@@ -423,12 +507,11 @@ margin-top: 5px;
 #advice-text {
   margin-top: 5px;
   height: 120px;
-  max-width: 100%;
-  min-width: 100%;
-  min-height: 120px;
-  max-height: 120px;
+  resize: none;
   width: 100%;
   border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top:5px;
 }
 
 #char-counter-advice {
@@ -439,7 +522,7 @@ margin-top: 5px;
 /* Email del feedback */
 
 .email-label {
-  display:block;
+  display: block;
 }
 
 #email-text {
@@ -449,3 +532,36 @@ margin-top: 5px;
   border-color: rgb(225, 225, 225);
   border-radius: 6px;
 }
+
+#submit-feed {
+  display: flex;
+  margin: 0 auto;
+  background-color: #1b273f;
+  color: #ffffff;
+  border: 1px solid #3d3d5c;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+  justify-content: center;
+  margin-top: 30px;
+  
+}
+
+#submit-feed:hover {
+  background-color: white;
+  color: #1b273f;
+}
+
+textarea::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  outline-color: #21355f;
+}
+
+input::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  outline-color: #21355f;
+}
+
+
