@@ -28,6 +28,11 @@ L'obiettivo principale di questa Build Week è stato simulare un ambiente di lav
 ## 💻 Tecnologie Utilizzate
 L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e performante:
 <!--eventualmente aggiungere badge, screenshot e quant'altro-->
+-
+-
+-
+-
+-
 
 ---
 
@@ -49,21 +54,41 @@ Il progetto è strutturato come una **Single Page Application (SPA)**. Il file H
 
 ## ⚙️ Architettura del Codice (State-Render-Events)
 L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Events**, garantendo una separazione netta tra i dati e l'interfaccia visiva:
+-
+-
+-
+-
+-
 
 ---
 
 ## 🛠️ Funzioni Principali
 Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
+-
+-
+-
+-
+-
 
 ---
 
 ## ✨ Funzionalità nel Dettaglio
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
+-
+-
+-
+-
+-
 
 ---
 
 ## 🚀 Possibili Migliorie
 Per futuri cicli di sviluppo, sono state identificate le seguenti ottimizzazioni:
+-
+-
+-
+-
+-
 
 
 
