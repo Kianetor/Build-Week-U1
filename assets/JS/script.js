@@ -181,7 +181,7 @@ const renderWelcome = () => {
   <h2>Benvenuto al tuo esame</h2>
   <p>Una serie di 10 domande sul mondo dell'informatica e del web. Per ogni domanda hai 20 secondi di tempo.</p>
   <ul>
-    <li>Ogni domanda è a tempo e puoi ricevere una sola risposta/li>
+    <li>Ogni domanda è a tempo e puoi ricevere una sola risposta</li>
     <li>Una volta cliccata una risposta, la domanda è chiusa.</li>
     <li>Il quiz dura circa 3 minuti.</li>
   </ul>
@@ -391,9 +391,7 @@ const renderResults = () => {
       <div class="error-warning">
         ⚠️ Le domande del quiz possono contenere errori. In caso di errori sei pregato di segnalarci l'errore!
       </div>
-      </div>
         <button id="button-gofeedback">Vai avanti</button>
-      </div>
     </div>
   `;
 
@@ -518,7 +516,7 @@ const renderFeedback = () => {
   </div>
 
   <div class="email">
-    <label class="email-label">La tua email <span>(facoltativa)</span></label>
+    <label class="email-label">La tua email <span class="email-optional">(facoltativa)</span></label>
     <input type="email" id="email-text" placeholder="es. nome@mail.it"></input>     
   </div>
 
@@ -562,9 +560,8 @@ const stars = document.querySelectorAll('.star-image');
 
 const renderThanksFeed = () => {
   app.innerHTML = `
-  <h2 class"thanks-feed-title>Grazie per il feedback!</h2>
-  <p class"emoji">🌟🚀</p>
-  <p class">Il tuo contributo è prezioso. Usiamo le recensioni dei nostri studenti per rifinire le domande e rendere l'applicazione del quiz sempre migliore.</p>
+  <h2 id="thanks-feed-title">🌟Grazie per il feedback!🌟</h2>
+  <p class="goodbye">Il tuo contributo è prezioso. Usiamo le recensioni dei nostri studenti per rifinire le domande e rendere l'applicazione del quiz sempre migliore.</p>
   `;
 
 }

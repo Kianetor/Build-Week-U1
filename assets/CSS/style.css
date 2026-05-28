@@ -417,12 +417,13 @@ margin-top: -8px;
 /* Stelle di feedback*/
 
 .title-feed {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 
 .star-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  
 }
 
 .star {
@@ -437,7 +438,7 @@ margin-top: -8px;
 .star-image {
   background: none;
   border: none;
-  font-size: 65px;
+  font-size: 50px;
   color: rgb(180, 160, 175);
   cursor: pointer;
   padding: 0;
@@ -447,8 +448,7 @@ margin-top: -8px;
 
 /* Effetto dinamico al passaggio del mouse sulla singola stella */
 .star-image:hover {
-  color: rgb(215, 40, 185);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Stato della stella quando viene cliccata e attivata tramite JS */
@@ -481,6 +481,7 @@ margin-top: -8px;
 }
 
 #liked-text {
+  font-size: 1rem;
   margin-top: 5px;
   height: 120px;
   resize: none;
@@ -508,6 +509,7 @@ margin-top: -8px;
 }
 
 #advice-text {
+  font-size: 1rem;
   margin-top: 5px;
   height: 120px;
   resize: none;
@@ -526,14 +528,22 @@ margin-top: -8px;
 
 .email-label {
   display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 #email-text {
+  font-size: 1rem;
   height: 30px;
   max-width: 100%;
   min-width: 100%;
   border-color: rgb(225, 225, 225);
   border-radius: 6px;
+}
+
+.email-label .email-optional {
+  font-size: 1rem;
+  color: #1b273f;
 }
 
 #submit-feed {
@@ -568,3 +578,14 @@ input::placeholder {
 }
 
 
+/* Pagina Ringraziamento */
+
+#thanks-feed-title {
+ font-size: 2rem;
+ text-align: center;
+ margin-bottom: 50px;
+}
+
+.goodbye {
+  font-size: 1.2rem;
+}
