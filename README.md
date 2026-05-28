@@ -4,18 +4,18 @@ Benvenuto nel repository di **EPIQUIZ**, un'applicazione web interattiva per qui
 
 ---
 
-## 📌 Indice dei Contenuti
-1. [🎯 Obiettivi del Progetto](#obiettivi-del-progetto)
-2. [💻 Tecnologie Utilizzate](#tecnologie-utilizzate)
-3. [📂 Struttura del Progetto](#struttura-del-progetto)
-4. [⚙️ Architettura del Codice (State-Render-Events)](#architettura-del-codice)
-5. [🛠️ Funzioni Principali](#funzioni-principali)
-6. [✨ Funzionalità nel Dettaglio](#funzionalita-nel-dettaglio)
-7. [🚀 Possibili Migliorie](#possibili-migliorie)
+## Indice dei Contenuti
+1. [🎯 Obiettivi del Progetto](#-obiettivi-del-progetto)
+2. [💻 Tecnologie Utilizzate](#-tecnologie-utilizzate)
+3. [📂 Struttura del Progetto](#-struttura-del-progetto)
+4. [🔧 Architettura del Codice (State-Render-Events)](#-architettura-del-codice)
+5. [⚙️ Funzioni Principali](#-funzioni-principali)
+6. [💡 Funzionalità nel Dettaglio](#-funzionalità-nel-dettaglio)
+7. [🚀 Possibili Migliorie](#-possibili-migliorie)
 
 ---
 
-## 🎯 Obiettivi del Progetto
+## Obiettivi del Progetto
 L'obiettivo principale di questa Build Week è stato simulare un ambiente di lavoro reale in team, focalizzandoci su:
 * **Manipolazione avanzata del DOM** senza l'ausilio di framework esterni.
 * **Gestione dello stato globale** dell'applicazione in JavaScript.
@@ -25,7 +25,7 @@ L'obiettivo principale di questa Build Week è stato simulare un ambiente di lav
 
 ---
 
-## 💻 Tecnologie Utilizzate
+## Tecnologie Utilizzate
 L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e performante:
 <!--eventualmente aggiungere badge, screenshot e quant'altro-->
 -
@@ -36,7 +36,7 @@ L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e perf
 
 ---
 
-## 📂 Struttura del Progetto
+## Struttura del Progetto
 Il progetto è strutturato come una **Single Page Application (SPA)**. Il file HTML rimane fisso, mentre JavaScript si occupa di svuotare e ripopolare il tag `<main id="app">` in base alla schermata corrente.
 
 ```text
@@ -52,7 +52,7 @@ Il progetto è strutturato come una **Single Page Application (SPA)**. Il file H
 ```
 ---
 
-## ⚙️ Architettura del Codice (State-Render-Events)
+## Architettura del Codice (State-Render-Events)
 L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Events**, garantendo una separazione netta tra i dati e l'interfaccia visiva:
 -
 -
@@ -62,7 +62,7 @@ L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Even
 
 ---
 
-## 🛠️ Funzioni Principali
+## Funzioni Principali
 Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
 -
 -
@@ -72,7 +72,7 @@ Il comportamento e l'interattività dell'applicazione sono governati dalle segue
 
 ---
 
-## ✨ Funzionalità nel Dettaglio
+## Funzionalità nel Dettaglio
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
 -
 -
@@ -82,7 +82,7 @@ L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utent
 
 ---
 
-## 🚀 Possibili Migliorie
+## Possibili Migliorie
 Per futuri cicli di sviluppo, sono state identificate le seguenti ottimizzazioni:
 -
 -
