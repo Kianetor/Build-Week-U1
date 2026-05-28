@@ -97,100 +97,84 @@ body {
   cursor: pointer;
 }
 
+/* SEZIONE QUIZ QUIZ */
 
+/* Contenitore di tutta la sezione quiz */
 
 .quiz-container {
   display: flex;
-  /* attivo flexbox */
   justify-content: space-between;
-  /* spingo titolo a sinistra e timer a destra cerando spazio */
   align-items: center;
-  /* allineo perfettamente in modo verticale */
   width: 100%;
-  /* fittati bene dentro il box */
   margin-bottom: 40px;
-  /* un po di distanza da sotto */
 }
 
+/* Contatore delle domande "n/10" in alto a sinistra */
+
 .question-counter {
+  font-size: 1rem;
   margin: 0;
-  /* tolgo margini di default per non sballare */
   font-weight: 300;
   color: grey;
 }
 
+/* Timer da 20 a 6 secondi */
+
 .black-timer {
   margin: 0;
-  /* per non sballare */
   font-size: 1.3rem;
-  /* grandezza */
   font-weight: bold;
-  /* grassetto */
   color: #1b2845;
-  /* colore nero */
   background-color: #f1f2f6;
-  /* colore del prof */
   padding: 8px 18px;
-  /* piu spazio interno */
   border-radius: 20px;
-  /* angoli belli rotondi */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  /* ombra piccolissima */
   transition: color 0.3s ease;
-  /* un pelo di transition per il rosso */
 }
+
+/* Timer da 5 secondi allo scadere */
 
 .red-timer {
   color: #ffffff !important;
-  /* numerino bianco */
   background-color: #ff3b30 !important;
-  /* sfondo bello rosso*/
-  animation: pulse 0.8s infinite alternate;
-  /* pulsazione animata */
+  animation: pulse 0.8s infinite alternate; /* pulsazione animata */
 }
 
-/* comandi per le animazioni del browser */
+/* Comandi per le animazioni del browser */
 @keyframes pulse {
   0% {
-    transform: scale(1);
-    /* dalla scala normale a quella piu grande dopo*/
+    transform: scale(1); /* dalla scala normale a quella piu grande dopo*/
   }
 
   100% {
-    transform: scale(1.12);
-    /* ingrandisce del 12% */
+    transform: scale(1.12);  /* ingrandisce del 12% */
   }
 }
 
 /* RISPOSTE, DOMANDE E PULSANTE DEL QUIZ */
 
+/* Organizzazione Risposte del quiz */
+
 .answers {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  /* distanza tra uno e laltro */
   margin-top: 40px;
 }
 
-/* Classe al click risosta giusta */
+/* Classe al click risposta giusta */
 
 .correct {
   background-color: #2ed573 !important;
-  /* sfondo verde */
   color: #ffffff !important;
-  /* testo bianco */
   border-color: #2ed573 !important;
-  /* bordino verde */
 }
 
-/* Classe al click risosta sbagliata */
+/* Classe al click risposta sbagliata */
 .wrong {
   background-color: #ff4757 !important;
-  /* sfondo rosso */
   color: #ffffff !important;
-  /* testo bianco */
   border-color: #ff4757 !important;
-  /* bordino rosso */
 }
 
 /* Blocca hover una volta data la risposta */
@@ -200,41 +184,37 @@ body {
   opacity: 1; /* non sbiadisce su safari e chrome */
 }
 
-/* Bottone Risposta */
+/* Stilizzazione del Bottone Risposta */
 
 .btn-answer {
   width: 100%;
-  text-align: left; /* testo verso sinistra */
-  padding: 18px 24px; /* bottone cicciotto */
-  font-size: 1rem; /* buon size */
+  text-align: left; 
+  padding: 18px 24px;
+  font-size: 1rem;
   font-family: Arial, sans-serif;
   color: #1b2845;
-  background-color: #ffffff; /* sfondo bbianco */
-  border: 1px solid #1b2845; /* bordo sottile e scuro */
-  border-radius: 12px; /* buon radius */
+  background-color: #ffffff; 
+  border: 1px solid #1b2845;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease; /* transition fluida per gli hover */
 }
 
-.btn-answer:hover:not(:disabled) {
-  /* metto il not disabled perche altrimenti 
+/* metto il not disabled perche altrimenti 
   si accende lo stesso dopo aver risposto */
+
+.btn-answer:hover:not(:disabled) {
   background-color: #2b3956;
-  /* sfondino blu per hover */
   color: #ffffff;
-  /* testo bianco */
   border-color: #2b3956;
-  /* bordino blu */
 }
 
 
-.question-counter {
-  font-size: 1rem;
-}
+
+/* SEZIONE RESULTS */
 
 
-/* CSS RENDER RESULTS ANIMAZIONE E GRAFICO */
-
+/* Contenitore della sezione Results */
 
 .results-container {
   text-align: center;
@@ -245,10 +225,14 @@ body {
 margin-top: -8px;
 }
 
+/* Paragrafo "Quiz completato */
+
 .complete-quiz {
   font-size: 1.2rem;
   margin-bottom: -20px;
 }
+
+/* Posizione del grafico a torta */
 
 .chart-wrapper {
   position: relative;
@@ -256,6 +240,8 @@ margin-top: -8px;
   height: 240px;
   margin: 40px auto;
 }
+
+/* Posizione del testo all'interno del grafico */
 
 .chart-center-text {
   position: absolute;
@@ -267,29 +253,14 @@ margin-top: -8px;
   pointer-events: none;
 }
 
-.chart-center-text strong {
-  font-size: 3rem;
-  color: #1b273f;
-}
+/* Verdetto del test superato (verde), fallito (rosso) */
 
-.chart-center-text span {
-  color: #c7cad6;
-  font-size: 0.9rem;
-}
+/* Testi dentro al grafico */ 
 
-/* --- TESTI DENTRO IL GRAFICO --- */
-.center-verdetto {
+.center-verdict {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 2px;
-}
-
-.text-superato {
-  color: #2ed573 !important;
-}
-
-.text-fallito {
-  color: #ff4757 !important;
 }
 
 .center-sub {
@@ -298,8 +269,32 @@ margin-top: -8px;
   margin-top: 2px;
 }
 
-/* --- BARRA ORIZZONTALE SCURA (STILE FOTO) --- */
-.riepilogo-container-orizzontale {
+.text-passed{
+  color: #2ed573 !important;
+}
+
+.text-failed {
+  color: #ff4757 !important;
+}
+
+/* Percenutale nel grafico */
+
+.chart-center-text strong {
+  font-size: 3rem;
+  color: #1b273f;
+}
+
+/* n/10 domande corrette */
+
+.chart-center-text span {
+  color: #c7cad6;
+  font-size: 0.9rem;
+}
+
+
+/* Barra sottostante il grafico */
+
+.summary-container-horizontal {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -312,7 +307,9 @@ margin-top: -8px;
   gap: 20px;
 }
 
-.riepilogo-box {
+/* Riepilogo domande "corrette", "sbagliate", "totali" */
+
+.summary-box {
   display: flex;
   gap: 20px;
 }
@@ -337,23 +334,25 @@ margin-top: -8px;
 }
 
 /* Numeri grandi colorati */
-.num-verde {
+
+.num-green {
   color: #2ed573;
   font-weight: bold;
   font-size: 1.4rem;
 }
-.num-rosso {
+.num-red {
   color: #ff4757;
   font-weight: bold;
   font-size: 1.4rem;
 }
-.num-blu {
+.num-blue {
   color: #5352ed;
   font-weight: bold;
   font-size: 1.4rem;
 }
 
 /* Riposizionamento e stile del bottone Ricomincia dentro la barra */
+
 #buttonRestart {
   margin: 0;
   background-color: #1b273f;
@@ -371,13 +370,16 @@ margin-top: -8px;
 }
 
 /* Testi di contorno inferiori */
-.feedback-invito {
+
+.feedback-invite {
   font-size: 0.85rem;
   color: #888;
   margin-bottom: 15px;
 }
 
-.avviso-errori {
+/* Barra gialla di avviso errore */
+
+.error-warning {
   background-color: rgba(255, 165, 0, 0.08);
   border: 2px solid orange;
   color: orange;
@@ -389,7 +391,8 @@ margin-top: -8px;
   line-height: 1.4;
 }
 
-/* FINE CSS PER DARE ANIMAZIONE E GRAFICO ALLA PERCENTUALE DELLA SCHERMATA FINALE */
+/* Button Vai Avanti */
+
 #button-gofeedback {
   display: flex;
   margin: 0 auto;
@@ -408,7 +411,7 @@ margin-top: -8px;
   color: #1b273f;
 }
 
-/* Feedback */
+/* SEZIONE FEEDBACK */
 
 
 /* Stelle di feedback*/
@@ -430,12 +433,12 @@ margin-top: -8px;
 }
 
 /* Stato base della stella (Vuota) */
+
 .star-image {
   background: none;
   border: none;
   font-size: 65px;
   color: rgb(180, 160, 175);
-  /* Colore grigio spento di base */
   cursor: pointer;
   padding: 0;
   line-height: 1;
