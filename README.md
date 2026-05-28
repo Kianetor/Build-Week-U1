@@ -22,12 +22,15 @@ L'obiettivo principale di questa Build Week è stato simulare un ambiente di lav
 ## Tecnologie Utilizzate
 L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e performante:
 <!-- eventualmente aggiungere badge, screenshot e quant'altro -->
-- 
-- 
-- 
-- 
-- 
+-
+-
+-
+-
+-
+
+
 ---
+
 ## Struttura del Progetto
 Il progetto è strutturato come una **Single Page Application (SPA)**. Il file HTML rimane fisso, mentre JavaScript si occupa di svuotare e ripopolare il tag `<main id="app">` in base alla schermata corrente.
 ```text
@@ -41,6 +44,7 @@ Il progetto è strutturato come una **Single Page Application (SPA)**. Il file H
 │   │   ├── epicode-logo.png    # Logo istituzionale nell'header
 │   │   └── bg.jpg              # Immagine di sfondo dell'applicazione
 ```
+
 ---
 
 ## Architettura del Codice (State-Render-Events)
@@ -75,6 +79,7 @@ L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utent
 
 ## Possibili Migliorie
 Per futuri cicli di sviluppo, sono state identificate le seguenti ottimizzazioni:
+
 -
 -
 -
