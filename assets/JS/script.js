@@ -212,7 +212,7 @@ const handleTimeout = () => {
       button.classList.add("correct");
     }
   });
-  
+
   // Passa alla domanda successiva dopo il delay
 
   setTimeout(() => {
