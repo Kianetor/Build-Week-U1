@@ -86,7 +86,7 @@ L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utent
 
 ---
 
-## 🚀Possibili Migliori
+## 🚀Possibili Migliorie
 Per futuri cicli di sviluppo, analizzando l'attuale base di codice, sono state identificate le seguenti ottimizzazioni:
 
 * **Recap risposte:** Attualmente l'utente non è in grado di poter visionare un recap delle domande con un salvataggio della risposta. Vorremmo implementare questa funzione nella sezione `renderResults`, ad esempio con un menù a tendina: mostrando la risposta corretta e quella dell'utente (nel caso sia errata).
