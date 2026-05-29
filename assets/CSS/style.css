@@ -25,6 +25,7 @@ body {
 
 .brand-logo {
   height: 36px;
+  margin-top: 20px;
 }
 
 #app {
@@ -60,7 +61,7 @@ body {
 
 .welcome p {
   color: #1b2845;
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 30px;
   font-weight: 40;
 }
@@ -72,7 +73,7 @@ body {
 }
 
 .welcome li {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #1b1535;
   padding: 2.5px;
 }
@@ -92,7 +93,7 @@ body {
 }
 
 #buttonStart:hover {
-  background-color: #1b273f;
+  background-color: #21355f;
   color: #ffffff;
   cursor: pointer;
 }
