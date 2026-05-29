@@ -1,5 +1,5 @@
 # 🚀 EPIQUIZ - Build Week 1
-Benvenuto nel repository di **EPIQUIZ**, un'applicazione web interattiva per quiz a risposta multipla sul mondo dell'informatica. Il progetto è stato sviluppato come Single Page Application (SPA) incentrata sulla manipolazione dinamica del DOM e sulla gestione avanzata del tempo tramite JavaScript Vanilla.
+Benvenuto nel repository di **EPIQUIZ**, un'applicazione web interattiva per quiz a risposta multipla sul mondo dell'informatica. Il progetto è stato sviluppato come Single Page Application (SPA) incentrata sulla manipolazione dinamica del DOM e sulla gestione avanzata del tempo tramite JavaScript.
 
 ---
 ## Indice dei Contenuti
