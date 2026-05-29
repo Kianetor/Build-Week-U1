@@ -54,7 +54,7 @@ L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Even
 
 ---
 
-## 🎯Funzioni Principali
+## ⚙️Funzioni Principali
 Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript:
 
 ### `renderWelcome()` 
@@ -72,7 +72,7 @@ Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzera
 
 ---
 
-## ⚙️Funzionalità nel Dettaglio
+## 💡Funzionalità nel Dettaglio
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
 
  **Method sort(()=> Math.random() -0.5)** ➤ Utilizzato per randomizzare l’ordine delle domande e mischiare dinamicamente le risposte del quiz
