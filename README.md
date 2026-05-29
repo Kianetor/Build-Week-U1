@@ -28,7 +28,6 @@ L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e perf
 - 🎨 **CSS**  → Per controllare la parte stilistica del progetto
 - ⚡ **JavaScript** → Per creare contenuti dinamici e manipolare i singoli eventi
 
-
 ---
 
 ## Struttura del Progetto
@@ -61,7 +60,8 @@ Il comportamento e l'interattività dell'applicazione sono governati dalle segue
 
 Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
 
-* **`renderWelcome()`**: Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzerando score e numero domanda) e mescola l'array delle domande tramite la funzione `shuffleQuestions()`. In questo modo le domande verranno prese in maniera casuale, così come le risposte (garantendo che la risposta corretta non si trovi nella stessa posizione per tutte le domande).
+### `renderWelcome()`: 
+Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzerando score e numero domanda) e mescola l'array delle domande tramite la funzione `shuffleQuestions()`. In questo modo le domande verranno prese in maniera casuale, così come le risposte (garantendo che la risposta corretta non si trovi nella stessa posizione per tutte le domande).
 * **`renderQuiz()`**: Il motore principale dell'applicazione. Si occupa di:
   * Pushare la domanda corrente (prendendola da un nuvo array `let shuffledQuestions = [];`) e le relative opzioni di risposta (mescolate dinamicamente anch'esse).
   * Gestire gli eventi di click sulle risposte, applicando le classi CSS (`.correct` o `.wrong`) per il feedback visivo immediato e disabilitando i bottoni per prevenire click multipli.
