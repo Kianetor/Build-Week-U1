@@ -46,7 +46,7 @@ Il progetto è strutturato come una **Single Page Application (SPA)**. Il file H
 
 ---
 
-## 🔧 Architettura del Codice (State-Render-Events)
+## 🔧Architettura del Codice (State-Render-Events)
 L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Events**, garantendo una separazione netta tra i dati e l'interfaccia visiva:
 
 * **State (Stato Globale):** Un insieme di variabili mutabili (`currentQuestion`, `score`, `timerId`, `shuffledQuestions`, `timeLeft`) mantiene il controllo in ogni istante dello stato dell'applicazione.
@@ -55,7 +55,7 @@ L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Even
 
 ---
 
-## ⚙️ Funzioni Principali
+## ⚙️Funzioni Principali
 **Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript**
 
 
@@ -74,7 +74,7 @@ Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzera
 
 ---
 
-## 💡 Funzionalità nel Dettaglio
+## 💡Funzionalità nel Dettaglio
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
 
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
@@ -89,7 +89,7 @@ L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utent
 
 ---
 
-## 🚀 Possibili Migliorie
+## 🚀Possibili Migliorie
 Per futuri cicli di sviluppo, sono state identificate le seguenti ottimizzazioni:
 
 Per futuri cicli di sviluppo, analizzando l'attuale base di codice, sono state identificate le seguenti ottimizzazioni:
