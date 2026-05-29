@@ -60,15 +60,18 @@ Il comportamento e l'interattività dell'applicazione sono governati dalle segue
 
 Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
 
-### `renderWelcome()`: 
+### `renderWelcome()` 
 Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzerando score e numero domanda) e mescola l'array delle domande tramite la funzione `shuffleQuestions()`. In questo modo le domande verranno prese in maniera casuale, così come le risposte (garantendo che la risposta corretta non si trovi nella stessa posizione per tutte le domande).
-* **`renderQuiz()`**: Il motore principale dell'applicazione. Si occupa di:
+### `renderQuiz()`
+ Il motore principale dell'applicazione. Si occupa di:
   * Pushare la domanda corrente (prendendola da un nuvo array `let shuffledQuestions = [];`) e le relative opzioni di risposta (mescolate dinamicamente anch'esse).
   * Gestire gli eventi di click sulle risposte, applicando le classi CSS (`.correct` o `.wrong`) per il feedback visivo immediato e disabilitando i bottoni per prevenire click multipli.
   * Invocare uno `startTimer()` per la gestione del countdown di 20 secondi.
   * Partenza di una funzione di supporto `handleTimeout()`, che scatta se il tempo a disposizione esaurisce o al click di una risposta. Ferma il timer, evidenziando la risposta corretta e utilizza un `setTimeout` per passare alla domanda successiva dopo un tempo prestabilito (`const FEEDBACK_DELAY = 1500;`).
-* **`renderResults()`**: Invocata al termine del quiz. Calcola le percentuali finali e fa partire la libreria **Chart.js** per renderizzare un grafico a ciambella interattivo. Gestisce anche l'animazione fluida (`setInterval`) del numero percentuale a centro schermo. Vi è inoltre un bottone restart (`const restartButton`) che permette di ritornare alla schermata Welcome, per poter riprovare il quiz.
-* **`renderFeedback()`** e **`renderThanksFeed()`**: Gestiscono il flusso finale post-quiz. Creano un'interfaccia interattiva a 5 stelle (dinamiche al passaggio del mouse e al click) e i campi di testo, portando infine l'utente alla schermata di ringraziamento.
+### `renderResults()`
+ Invocata al termine del quiz. Calcola le percentuali finali e fa partire la libreria **Chart.js** per renderizzare un grafico a ciambella interattivo. Gestisce anche l'animazione fluida (`setInterval`) del numero percentuale a centro schermo. Vi è inoltre un bottone restart (`const restartButton`) che permette di ritornare alla schermata Welcome, per poter riprovare il quiz.
+### `renderFeedback()` e `renderThanksFeed()`
+ Gestiscono il flusso finale post-quiz. Creano un'interfaccia interattiva a 5 stelle (dinamiche al passaggio del mouse e al click) e i campi di testo, portando infine l'utente alla schermata di ringraziamento.
 
 ---
 
