@@ -8,7 +8,7 @@ Benvenuto nel repository di **EPIQUIZ**, un'applicazione web interattiva per qui
 3. [📂 Struttura del Progetto](#struttura-del-progetto)
 4. [🔧 Architettura del Codice (State-Render-Events)](#architettura-del-codice-state-render-events)
 5. [⚙️ Funzioni Principali](#funzioni-principali)
-6. [💡 Funzionalità nel Dettaglio](#funzionalita-nel-dettaglio)
+6. [🔎 Funzionalità nel Dettaglio](#funzionalita-nel-dettaglio)
 7. [🚀 Possibili Migliorie](#possibili-migliorie)
 
 ---
@@ -72,7 +72,7 @@ Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzera
 
 ---
 
-## 💡Funzionalità nel Dettaglio
+## 🔎Funzionalità nel Dettaglio
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
 
  **Method sort(()=> Math.random() -0.5)** ➤ Utilizzato per randomizzare l’ordine delle domande e mischiare dinamicamente le risposte del quiz
