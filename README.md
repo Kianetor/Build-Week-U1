@@ -12,7 +12,7 @@ Benvenuto nel repository di **EPIQUIZ**, un'applicazione web interattiva per qui
 7. [🚀 Possibili Migliorie](#possibili-migliorie)
 
 ---
-## Obiettivi del Progetto
+## 🎯Obiettivi del Progetto
 L'obiettivo principale di questa Build Week è stato simulare un ambiente di lavoro reale in team, focalizzandoci su:
 - **Manipolazione avanzata del DOM** senza l'ausilio di framework esterni.
 - **Gestione dello stato globale** dell'applicazione in JavaScript.
@@ -46,7 +46,7 @@ Il progetto è strutturato come una **Single Page Application (SPA)**. Il file H
 
 ---
 
-## Architettura del Codice (State-Render-Events)
+## 🔧Architettura del Codice (State-Render-Events)
 L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Events**, garantendo una separazione netta tra i dati e l'interfaccia visiva:
 
 * **State (Stato Globale):** Un insieme di variabili mutabili (`currentQuestion`, `score`, `timerId`, `shuffledQuestions`, `timeLeft`) mantiene il controllo in ogni istante dello stato dell'applicazione.
@@ -58,7 +58,6 @@ L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Even
 ## Funzioni Principali
 Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
 
-Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
 
 ### `renderWelcome()` 
 Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzerando score e numero domanda) e mescola l'array delle domande tramite la funzione `shuffleQuestions()`. In questo modo le domande verranno prese in maniera casuale, così come le risposte (garantendo che la risposta corretta non si trovi nella stessa posizione per tutte le domande).
