@@ -167,7 +167,6 @@ let timerId = null;
 
 
 let shuffledQuestions = [];
-const suonoTick = new Audio("assets/sounds/tick2.wav"); //audio nel tick per un po di vitalita
 const app = document.querySelector("#app"); //collega al main dell html
 const shuffleQuestions = () => {
   shuffledQuestions = [...QUESTIONS].sort(() => Math.random() - 0.5);
@@ -204,7 +203,6 @@ const renderWelcome = () => {
 
 const handleTimeout = () => {
   clearInterval(timerId);
-  suonoTick.pause();
   const questionNow = shuffledQuestions[currentQuestion];
   const buttonsAnswers = document.querySelectorAll(".btn-answer");
   // Disabilita tutti i bottoni e mostra la risposta corretta
@@ -214,6 +212,7 @@ const handleTimeout = () => {
       button.classList.add("correct");
     }
   });
+  
   // Passa alla domanda successiva dopo il delay
 
   setTimeout(() => {
