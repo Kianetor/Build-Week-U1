@@ -12,7 +12,7 @@ Benvenuto nel repository di **EPIQUIZ**, un'applicazione web interattiva per qui
 7. [🚀 Possibili Migliorie](#possibili-migliorie)
 
 ---
-## 🎯Obiettivi del Progetto
+## 🎯 Obiettivi del Progetto
 L'obiettivo principale di questa Build Week è stato simulare un ambiente di lavoro reale in team, focalizzandoci su:
 - **Manipolazione avanzata del DOM** senza l'ausilio di framework esterni.
 - **Gestione dello stato globale** dell'applicazione in JavaScript.
@@ -21,7 +21,7 @@ L'obiettivo principale di questa Build Week è stato simulare un ambiente di lav
 - Scrittura di codice moderno, modulare e pulito seguendo gli standard **ES6**.
 
 ---
-## Tecnologie Utilizzate
+## 💻 Tecnologie Utilizzate
 L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e performante:
 <!-- eventualmente aggiungere badge, screenshot e quant'altro -->
 - 🌐 **HTML** → Per definire la struttura della singola pagina
@@ -30,7 +30,7 @@ L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e perf
 
 ---
 
-## Struttura del Progetto
+## 📂 Struttura del Progetto
 Il progetto è strutturato come una **Single Page Application (SPA)**. Il file HTML rimane fisso, mentre JavaScript si occupa di svuotare e ripopolare il tag `<main id="app">` in base alla schermata corrente.
 ```text
 ├── index.html                  # File HTML principale (Entry-point unico)
@@ -46,7 +46,7 @@ Il progetto è strutturato come una **Single Page Application (SPA)**. Il file H
 
 ---
 
-## 🔧Architettura del Codice (State-Render-Events)
+## 🔧 Architettura del Codice (State-Render-Events)
 L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Events**, garantendo una separazione netta tra i dati e l'interfaccia visiva:
 
 * **State (Stato Globale):** Un insieme di variabili mutabili (`currentQuestion`, `score`, `timerId`, `shuffledQuestions`, `timeLeft`) mantiene il controllo in ogni istante dello stato dell'applicazione.
@@ -55,8 +55,8 @@ L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Even
 
 ---
 
-## Funzioni Principali
-Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
+## ⚙️ Funzioni Principali
+**Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript**
 
 
 ### `renderWelcome()` 
@@ -74,7 +74,7 @@ Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzera
 
 ---
 
-## Funzionalità nel Dettaglio
+## 💡 Funzionalità nel Dettaglio
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
 
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
@@ -89,7 +89,7 @@ L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utent
 
 ---
 
-## Possibili Migliorie
+## 🚀 Possibili Migliorie
 Per futuri cicli di sviluppo, sono state identificate le seguenti ottimizzazioni:
 
 Per futuri cicli di sviluppo, analizzando l'attuale base di codice, sono state identificate le seguenti ottimizzazioni:
