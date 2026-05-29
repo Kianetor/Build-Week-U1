@@ -79,14 +79,14 @@ Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzera
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
 
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
-- **Method sort(()=> Math.random() -0.5)** ➤ Utilizzato per randomizzare l’ordine delle domande e mischiare dinamicamente le risposte del quiz
-- **Property innerHTML** ➤ Impiegata per aggiornare e gestire i contenuti mostrati nelle diverse schermate dell’applicazione
-- **Method querySelector & querySelectorAll** ➤ Utilizzati per selezionare e manipolare gli elementi del DOM, collegando struttura, stile e logica del progetto
-- **Method classList.add** ➤ Per poter modificare stilisticamente determinati oggetti
-- **Method map(...).join("")**  ➤ Sfruttato per generare dinamicamente elementi HTML a partire dagli array, creando automaticamente i pulsanti delle risposte
-- **Method forEach**  ➤ Utilizzato per aggiornare in tempo reale il punteggio e gestire la visualizzazione del risultato finale          
-- **Function setTimeout**  ➤ Impiegata per controllare il delay tra l’azione dell’utente e il caricamento della schermata successiva
-- **Function setInterval & clearInterval**  ➤ Utilizzate per creare, aggiornare e interrompere il timer automatico delle domande
+ **Method sort(()=> Math.random() -0.5)** ➤ Utilizzato per randomizzare l’ordine delle domande e mischiare dinamicamente le risposte del quiz
+ **Property innerHTML** ➤ Impiegata per aggiornare e gestire i contenuti mostrati nelle diverse schermate dell’applicazione
+ **Method querySelector & querySelectorAll** ➤ Utilizzati per selezionare e manipolare gli elementi del DOM, collegando struttura, stile e logica del progetto
+ **Method classList.add** ➤ Per poter modificare stilisticamente determinati oggetti
+ **Method map(...).join("")**  ➤ Sfruttato per generare dinamicamente elementi HTML a partire dagli array, creando automaticamente i pulsanti delle risposte
+ **Method forEach**  ➤ Utilizzato per aggiornare in tempo reale il punteggio e gestire la visualizzazione del risultato finale          
+ **Function setTimeout**  ➤ Impiegata per controllare il delay tra l’azione dell’utente e il caricamento della schermata successiva
+ **Function setInterval & clearInterval**  ➤ Utilizzate per creare, aggiornare e interrompere il timer automatico delle domande
 
 ---
 
