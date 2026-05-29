@@ -7,7 +7,7 @@ Benvenuto nel repository di **EPIQUIZ**, un'applicazione web interattiva per qui
 2. [💻 Tecnologie Utilizzate](#tecnologie-utilizzate)
 3. [📂 Struttura del Progetto](#struttura-del-progetto)
 4. [🔧 Architettura del Codice (State-Render-Events)](#architettura-del-codice-state-render-events)
-5. [⚙️ Funzioni Principali](#funzioni-principali)
+5. [📝 Funzioni Principali](#funzioni-principali)
 6. [🔎 Funzionalità nel Dettaglio](#funzionalità-nel-dettaglio)
 7. [🚀 Possibili Migliorie](#possibili-migliorie)
 
@@ -54,7 +54,7 @@ L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Even
 
 ---
 
-## ⚙️Funzioni Principali
+## 📝Funzioni Principali
 Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript:
 
 ### `renderWelcome()` 
