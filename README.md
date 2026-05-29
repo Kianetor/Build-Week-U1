@@ -10,6 +10,7 @@ Benvenuto nel repository di **EPIQUIZ**, un'applicazione web interattiva per qui
 5. [⚙️ Funzioni Principali](#funzioni-principali)
 6. [💡 Funzionalità nel Dettaglio](#funzionalita-nel-dettaglio)
 7. [🚀 Possibili Migliorie](#possibili-migliorie)
+
 ---
 ## Obiettivi del Progetto
 L'obiettivo principale di questa Build Week è stato simulare un ambiente di lavoro reale in team, focalizzandoci su:
@@ -18,6 +19,7 @@ L'obiettivo principale di questa Build Week è stato simulare un ambiente di lav
 - Controllo dei flussi temporali asincroni (`setInterval` e `setTimeout`).
 - Integrazione di librerie esterne tramite CDN (Chart.js per i grafici dei risultati).
 - Scrittura di codice moderno, modulare e pulito seguendo gli standard **ES6**.
+
 ---
 ## Tecnologie Utilizzate
 L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e performante:
