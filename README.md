@@ -51,6 +51,7 @@ Il progetto è strutturato come una **Single Page Application (SPA)**. Il file H
 
 ## Architettura del Codice (State-Render-Events)
 L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Events**, garantendo una separazione netta tra i dati e l'interfaccia visiva:
+
 -
 -
 -
@@ -61,6 +62,7 @@ L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Even
 
 ## Funzioni Principali
 Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
+
 -
 -
 -
@@ -71,6 +73,7 @@ Il comportamento e l'interattività dell'applicazione sono governati dalle segue
 
 ## Funzionalità nel Dettaglio
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
+
 -
 -
 -
