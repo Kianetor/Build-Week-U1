@@ -23,7 +23,6 @@ L'obiettivo principale di questa Build Week è stato simulare un ambiente di lav
 ---
 ## 💻Tecnologie Utilizzate
 L'applicazione è stata sviluppata utilizzando un parco tecnologie snello e performante:
-<!-- eventualmente aggiungere badge, screenshot e quant'altro -->
 - 🌐 **HTML** → Per definire la struttura della singola pagina
 - 🎨 **CSS**  → Per controllare la parte stilistica del progetto
 - ⚡ **JavaScript** → Per creare contenuti dinamici e manipolare i singoli eventi
@@ -56,9 +55,7 @@ L'applicazione segue il pattern architetturale **State ➡️ Render ➡️ Even
 ---
 
 ## 🎯Funzioni Principali
-
-Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript
-
+Il comportamento e l'interattività dell'applicazione sono governati dalle seguenti funzioni JavaScript:
 
 ### `renderWelcome()` 
 Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzerando score e numero domanda) e mescola l'array delle domande tramite la funzione `shuffleQuestions()`. In questo modo le domande verranno prese in maniera casuale, così come le risposte (garantendo che la risposta corretta non si trovi nella stessa posizione per tutte le domande).
@@ -75,10 +72,9 @@ Genera la schermata iniziale di benvenuto. Inizializza lo stato del quiz (azzera
 
 ---
 
-## 🎯Funzionalità nel Dettaglio
+## ⚙️Funzionalità nel Dettaglio
 L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
 
-L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utente ed evitare i bug tipici del DOM:
  **Method sort(()=> Math.random() -0.5)** ➤ Utilizzato per randomizzare l’ordine delle domande e mischiare dinamicamente le risposte del quiz
  **Property innerHTML** ➤ Impiegata per aggiornare e gestire i contenuti mostrati nelle diverse schermate dell’applicazione
  **Method querySelector & querySelectorAll** ➤ Utilizzati per selezionare e manipolare gli elementi del DOM, collegando struttura, stile e logica del progetto
@@ -90,9 +86,7 @@ L'applicazione integra accorgimenti specifici per ottimizzare l'esperienza utent
 
 ---
 
-## 🚀Possibili Migliorie
-Per futuri cicli di sviluppo, sono state identificate le seguenti ottimizzazioni:
-
+## 🚀Possibili Migliori
 Per futuri cicli di sviluppo, analizzando l'attuale base di codice, sono state identificate le seguenti ottimizzazioni:
 
 * **Recap risposte:** Attualmente l'utente non è in grado di poter visionare un recap delle domande con un salvataggio della risposta. Vorremmo implementare questa funzione nella sezione `renderResults`, ad esempio con un menù a tendina: mostrando la risposta corretta e quella dell'utente (nel caso sia errata).
